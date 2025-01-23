@@ -32,12 +32,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   services.greetd = {
     enable = true;
     settings = {
@@ -46,6 +40,9 @@
       };
     };
   };
+  services.openssh.enable = true;
+  services.fail2ban.enable = true;
+  services.tailscale.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.xdecoret = {
@@ -59,7 +56,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git	
+    git
     fzf
     grc
     fishPlugins.fzf-fish
@@ -81,6 +78,7 @@
     swaytools
     i3status
     neofetch
+    tailscale
   ];
   environment.variables.EDITOR = "vim";
 
