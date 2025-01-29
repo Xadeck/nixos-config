@@ -83,6 +83,7 @@
   programs.vim.enable = true;
   programs.waybar.enable = true;
   programs.mosh.enable = true;
+  programs.hyprland.enable = true;
 
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
