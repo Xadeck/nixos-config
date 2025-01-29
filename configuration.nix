@@ -71,6 +71,7 @@
     neofetch
     tailscale
     alejandra
+    playerctl
   ];
   environment.variables.EDITOR = "vim";
 
