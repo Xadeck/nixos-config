@@ -37,6 +37,7 @@
   services.openssh.enable = true;
   services.fail2ban.enable = true;
   services.tailscale.enable = true;
+  services.hypridle.enable = true;
 
   users.users.xdecoret = {
     isNormalUser = true;
@@ -85,6 +86,7 @@
   programs.waybar.enable = true;
   programs.mosh.enable = true;
   programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
 
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
