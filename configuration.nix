@@ -73,6 +73,10 @@
     tailscale
     alejandra
     playerctl
+    rustc rustfmt
+    zip
+    lua luaformatter
+
   ];
   environment.variables.EDITOR = "vim";
 
