@@ -63,6 +63,7 @@
     fishPlugins.grc
     fuzzel
     gcc
+    go gopls
     google-chrome
     grc
     i3status
@@ -71,7 +72,8 @@
     neofetch
     pkgs.kitty
     playerctl
-    python3Minimal
+    pyright
+    python3Full
     ripgrep
     rustup rustc rustfmt
     swaytools
