@@ -77,6 +77,10 @@
     zip
     lua luaformatter
     zig
+    gcc
+    clang clang-manpages clang-tools clang-analyzer
+    codechecker
+    ccls bear
   ];
   environment.variables.EDITOR = "vim";
 
