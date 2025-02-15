@@ -49,7 +49,6 @@
 
   environment.systemPackages = with pkgs; [
     alejandra
-    bat
     btop
     ccls bear
     chezmoi
@@ -59,12 +58,11 @@
     delta
     eza
     fd
+    fzf
     fishPlugins.fzf-fish
     fishPlugins.grc
     fuzzel
-    fzf
     gcc
-    git
     google-chrome
     grc
     i3status
@@ -88,7 +86,9 @@
     nerd-fonts.fira-code
   ];
 
+  programs.bat.enable = true;
   programs.fish.enable = true;
+  programs.git.enable = true;
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
   programs.mosh.enable = true;
