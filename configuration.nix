@@ -75,7 +75,7 @@
     playerctl
     rustup rustc rustfmt
     zip
-    lua luaformatter
+    lua luaformatter luarocks
     zig
     gcc
     clang clang-manpages clang-tools clang-analyzer
