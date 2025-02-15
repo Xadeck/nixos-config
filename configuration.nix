@@ -48,39 +48,39 @@
   };
 
   environment.systemPackages = with pkgs; [
-    git
-    fzf
-    grc
-    fishPlugins.fzf-fish
-    fishPlugins.grc
-    pkgs.kitty
-    tree
-    btop
-    ripgrep
-    fd
-    bat
-    eza
-    google-chrome
-    fuzzel
-    chezmoi
-    delta
-    python3Minimal
-    chromium
-    keymapp
-    swaytools
-    i3status
-    neofetch
-    tailscale
     alejandra
-    playerctl
-    rustup rustc rustfmt
-    zip
-    lua luaformatter luarocks
-    zig
-    gcc
+    bat
+    btop
+    ccls bear
+    chezmoi
+    chromium
     clang clang-manpages clang-tools clang-analyzer
     codechecker
-    ccls bear
+    delta
+    eza
+    fd
+    fishPlugins.fzf-fish
+    fishPlugins.grc
+    fuzzel
+    fzf
+    gcc
+    git
+    google-chrome
+    grc
+    i3status
+    keymapp
+    lua luaformatter luarocks
+    neofetch
+    pkgs.kitty
+    playerctl
+    python3Minimal
+    ripgrep
+    rustup rustc rustfmt
+    swaytools
+    tailscale
+    tree
+    zig
+    zip
   ];
   environment.variables.EDITOR = "vim";
 
@@ -89,13 +89,13 @@
   ];
 
   programs.fish.enable = true;
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
+  programs.mosh.enable = true;
+  programs.neovim.enable = true;
   programs.sway.enable = true;
   programs.vim.enable = true;
   programs.waybar.enable = true;
-  programs.mosh.enable = true;
-  programs.hyprland.enable = true;
-  programs.hyprlock.enable = true;
-  programs.neovim.enable = true;
 
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
