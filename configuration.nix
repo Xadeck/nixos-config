@@ -50,10 +50,14 @@
   environment.systemPackages = with pkgs; [
     alejandra
     btop
-    ccls bear
+    ccls
+    bear
     chezmoi
     chromium
-    clang clang-manpages clang-tools clang-analyzer
+    clang
+    clang-manpages
+    clang-tools
+    clang-analyzer
     codechecker
     delta
     eza
@@ -63,19 +67,24 @@
     fishPlugins.grc
     fuzzel
     gcc
-    go gopls
+    go
+    gopls
     google-chrome
     grc
     i3status
     keymapp
-    lua luaformatter luarocks
+    lua
+    luaformatter
+    luarocks
     neofetch
     pkgs.kitty
     playerctl
     pyright
     python3Full
     ripgrep
-    rustup rustc rustfmt
+    rustup
+    rustc
+    rustfmt
     stylua
     swaytools
     tailscale
