@@ -76,6 +76,7 @@
     python3Full
     ripgrep
     rustup rustc rustfmt
+    stylua
     swaytools
     tailscale
     tree
