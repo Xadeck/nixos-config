@@ -95,6 +95,7 @@
   programs.mosh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
+  programs.neovim.enable = true;
 
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
