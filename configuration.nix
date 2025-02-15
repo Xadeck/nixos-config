@@ -83,6 +83,7 @@
     pyright
     python3Full
     ripgrep
+    rust-analyzer
     rustup
     rustc
     rustfmt
