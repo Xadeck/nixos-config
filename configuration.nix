@@ -75,6 +75,7 @@
     keymapp
     lua
     luaformatter
+    lua-language-server
     luarocks
     neofetch
     pkgs.kitty
