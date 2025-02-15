@@ -100,6 +100,8 @@
   programs.vim.enable = true;
   programs.waybar.enable = true;
 
+  programs.nix-ld.enable = true;
+
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
     "text/html" = "google-chrome.desktop";
