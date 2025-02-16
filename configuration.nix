@@ -72,6 +72,7 @@
     google-chrome
     grc
     i3status
+    jq
     keymapp
     lua
     luaformatter
