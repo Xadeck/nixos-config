@@ -94,6 +94,7 @@
     stylua
     swaytools
     tailscale
+    tree-sitter
     tree
     zig
     zip
