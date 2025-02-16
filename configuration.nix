@@ -60,6 +60,7 @@
     clang-analyzer
     codechecker
     delta
+    entr
     eza
     fd
     fzf
