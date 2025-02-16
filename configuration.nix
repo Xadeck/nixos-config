@@ -52,6 +52,7 @@
     bacon
     bear
     btop
+    cargo-nextest
     ccls
     chezmoi
     chromium
