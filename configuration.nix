@@ -94,10 +94,12 @@
     stylua
     swaytools
     tailscale
+    tmux
     tree-sitter
     tree
     zig
     zip
+    fish-lsp
   ];
   environment.variables.EDITOR = "vim";
 
