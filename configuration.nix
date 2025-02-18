@@ -110,8 +110,6 @@
   programs.bat.enable = true;
   programs.fish.enable = true;
   programs.git.enable = true;
-  programs.hyprland.enable = true;
-  programs.hyprlock.enable = true;
   programs.mosh.enable = true;
   programs.neovim.enable = true;
   programs.sway.enable = true;
