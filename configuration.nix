@@ -77,6 +77,7 @@
     i3status
     jq
     keymapp
+    lldb
     lua
     lua-language-server
     luaformatter
