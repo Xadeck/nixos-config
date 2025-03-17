@@ -72,6 +72,7 @@
     fuzzel
     fzf
     gcc
+    gh
     go
     google-chrome
     gopls
