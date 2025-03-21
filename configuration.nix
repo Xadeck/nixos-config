@@ -106,6 +106,7 @@
     tmux
     tree
     tree-sitter
+    vscode-langservers-extracted
     zig
     zip
   ];
