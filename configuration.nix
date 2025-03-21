@@ -73,6 +73,7 @@
     fzf
     gcc
     gh
+    github-desktop
     go
     google-chrome
     gopls
