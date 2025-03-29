@@ -95,8 +95,6 @@
     python3Full
     ripgrep
     rust-analyzer
-    rustc
-    rustfmt
     rustup
     starpls-bin
     stylua
