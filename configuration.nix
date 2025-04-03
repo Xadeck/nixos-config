@@ -49,7 +49,6 @@
 
   environment.systemPackages = with pkgs; [
     alejandra
-    bacon
     bear
     btop
     cargo-nextest
