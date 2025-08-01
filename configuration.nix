@@ -47,8 +47,17 @@
     shell = pkgs.fish;
   };
 
+  users.users.gheruha = {
+    isNormalUser = true;
+    description = "Max Gheruha";
+    extraGroups = [];
+    packages = with pkgs; [];
+    shell = pkgs.zsh;
+  };
+  
   environment.systemPackages = with pkgs; [
     alejandra
+    bazel_7
     bear
     btop
     cargo-nextest
@@ -60,11 +69,11 @@
     clang-manpages
     clang-tools
     codechecker
+    cowsay
     delta
     entr
     eza
     fd
-    fish-lsp
     fish-lsp
     fishPlugins.fzf-fish
     fishPlugins.grc
@@ -78,6 +87,7 @@
     gopls
     grc
     i3status
+    inetutils
     jq
     keymapp
     lldb
@@ -104,6 +114,7 @@
     tmux
     tree
     tree-sitter
+    tup
     typescript-language-server
     vscode-langservers-extracted
     zig
@@ -117,6 +128,7 @@
 
   programs.bat.enable = true;
   programs.fish.enable = true;
+  programs.zsh.enable = true;
   programs.git.enable = true;
   programs.mosh.enable = true;
   programs.neovim.enable = true;
