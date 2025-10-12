@@ -116,6 +116,7 @@
     tree-sitter
     tup
     typescript-language-server
+    unzip
     vscode-langservers-extracted
     zig
     zip
