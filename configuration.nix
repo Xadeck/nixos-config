@@ -26,6 +26,10 @@
   time.timeZone = "Europe/Zurich";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
   services.greetd = {
     enable = true;
     settings = {
@@ -95,6 +99,7 @@
     lua-language-server
     luaformatter
     luarocks
+    mycli
     neofetch
     nodejs
     openssl
