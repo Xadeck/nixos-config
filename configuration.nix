@@ -34,7 +34,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time";
       };
     };
   };
@@ -77,6 +77,7 @@
     delta
     entr
     eza
+    fastfetch
     fd
     fish-lsp
     fishPlugins.fzf-fish
@@ -94,23 +95,20 @@
     inetutils
     jq
     keymapp
+    kitty
     lldb
     lua
     lua-language-server
     luaformatter
     luarocks
-    mycli
-    neofetch
     nodejs
     openssl
-    pkgs.kitty
     playerctl
     pyright
-    python3Full
     ripgrep
     rust-analyzer
     rustup
-    starpls-bin
+    starpls
     stylua
     swaytools
     tailscale
