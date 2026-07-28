@@ -91,6 +91,7 @@
     google-chrome
     gopls
     grc
+    tldr
     i3status
     inetutils
     jq
