@@ -65,14 +65,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    inputs.antigravity-nix.packages.${pkgs.system}.default
-    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-ide
-    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-cli
-
     alejandra
     bazel_7
     bear
     btop
+    caddy
     cargo-nextest
     ccls
     chezmoi
@@ -84,6 +81,8 @@
     codechecker
     cowsay
     delta
+    docker
+    dockerfmt
     entr
     eza
     fastfetch
@@ -102,6 +101,9 @@
     grc
     i3status
     inetutils
+    inputs.antigravity-nix.packages.${pkgs.system}.default
+    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-cli
+    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-ide
     jq
     keymapp
     kitty
@@ -110,9 +112,11 @@
     lua-language-server
     luaformatter
     luarocks
+    nixd
     nodejs
     openssl
     playerctl
+    pocketbase
     pyright
     ripgrep
     rust-analyzer
