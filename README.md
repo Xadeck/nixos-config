@@ -1,7 +1,7 @@
 # nixos-config
 
 ```shell
-nixos-rebuild --sudo switch --flake ~/nixos-config#gkmtec
+nixos-rebuild --sudo switch --flake ~/nixos-config#gmktec
 ```
 
 ```shell

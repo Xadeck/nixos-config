@@ -1,12 +1,17 @@
 {
-  config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
   ];
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    auto-optimise-store = true;
+  };
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -34,7 +39,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd sway";
       };
     };
   };
@@ -60,6 +65,10 @@
   };
 
   environment.systemPackages = with pkgs; [
+    inputs.antigravity-nix.packages.${pkgs.system}.default
+    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-ide
+    inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-cli
+
     alejandra
     bazel_7
     bear
@@ -111,7 +120,6 @@
     starpls
     stylua
     swaytools
-    tailscale
     tailwindcss
     tailwindcss-language-server
     tldr
@@ -141,7 +149,16 @@
   programs.vim.enable = true;
   programs.waybar.enable = true;
 
-  programs.nix-ld.enable = true;
+  # Enable nix-ld to run unpatched dynamic binaries with common fallback libraries (e.g., IDE extensions, Node native addons)
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+      openssl
+      glibc
+    ];
+  };
 
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
