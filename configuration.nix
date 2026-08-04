@@ -58,7 +58,7 @@
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
-  
+
   environment.systemPackages = with pkgs; [
     alejandra
     bazel_7
@@ -91,7 +91,6 @@
     google-chrome
     gopls
     grc
-    tldr
     i3status
     inetutils
     jq
@@ -115,6 +114,7 @@
     tailscale
     tailwindcss
     tailwindcss-language-server
+    tldr
     tmux
     tree
     tree-sitter
