@@ -113,6 +113,7 @@
     codechecker
     cowsay
     delta
+    dig
     djlint
     docker
     dockerfmt
