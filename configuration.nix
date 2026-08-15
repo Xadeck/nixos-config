@@ -135,7 +135,10 @@
     zig
     zip
   ];
-  environment.variables.EDITOR = "vim";
+  environment.variables = {
+    EDITOR = "vim";
+    BROWSER = "google-chrome";
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
@@ -165,10 +168,13 @@
   # Make Google Chrome the default browser
   xdg.mime.defaultApplications = {
     "text/html" = "google-chrome.desktop";
+    "text/xml" = "google-chrome.desktop";
+    "application/xhtml+xml" = "google-chrome.desktop";
     "x-scheme-handler/http" = "google-chrome.desktop";
     "x-scheme-handler/https" = "google-chrome.desktop";
     "x-scheme-handler/about" = "google-chrome.desktop";
     "x-scheme-handler/unknown" = "google-chrome.desktop";
+    "x-scheme-handler/mailto" = "google-chrome.desktop";
   };
 
   # This value determines the NixOS release from which the default
