@@ -52,7 +52,6 @@
     isNormalUser = true;
     description = "Xavier Decoret";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [];
     shell = pkgs.fish;
   };
 
@@ -60,7 +59,6 @@
     isNormalUser = true;
     description = "Max Gheruha";
     extraGroups = [];
-    packages = with pkgs; [];
     shell = pkgs.zsh;
   };
 
