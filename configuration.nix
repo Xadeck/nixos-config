@@ -67,6 +67,7 @@
     bazel_7
     bear
     btop
+    buildifier
     caddy
     cargo-nextest
     ccls
@@ -79,6 +80,7 @@
     codechecker
     cowsay
     delta
+    djlint
     docker
     dockerfmt
     entr
@@ -110,15 +112,18 @@
     lua-language-server
     luaformatter
     luarocks
+    mdformat
     nixd
     nodejs
     openssl
     playerctl
     pocketbase
+    prettier
     pyright
     ripgrep
     rust-analyzer
     rustup
+    rustywind
     starpls
     stylua
     swaytools
