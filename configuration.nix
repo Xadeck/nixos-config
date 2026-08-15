@@ -27,6 +27,7 @@
   networking.hostName = "gmktec"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [80 443];
 
   time.timeZone = "Europe/Zurich";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -47,6 +48,38 @@
   services.fail2ban.enable = true;
   services.tailscale.enable = true;
   services.hypridle.enable = true;
+
+  # Ensure Caddy host volume directories exist
+  systemd.tmpfiles.rules = [
+    "d /var/lib/caddy/data 0755 root root -"
+    "d /var/lib/caddy/config 0755 root root -"
+  ];
+
+  # Podman container runtime configuration
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true; # Provide docker CLI wrapper for podman
+    defaultNetwork.settings.dns_enabled = true;
+  };
+
+  # Declarative OCI Caddy Webserver Container
+  virtualisation.oci-containers = {
+    backend = "podman";
+    containers.caddy = {
+      image = "docker.io/library/caddy:latest";
+      ports = [
+        "80:80"
+        "443:443"
+      ];
+      volumes = [
+        "/home/xdecoret/nixos-config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro"
+        "/home/xdecoret/nixos-config/caddy/wip.caddy:/etc/caddy/wip.caddy:ro"
+        "/var/lib/caddy/data:/data"
+        "/var/lib/caddy/config:/config"
+      ];
+      autoStart = true;
+    };
+  };
 
   users.users.xdecoret = {
     isNormalUser = true;

@@ -1,0 +1,64 @@
+(wip_site) {
+	header Content-Type "text/html; charset=utf-8"
+	respond `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress - xavier.decoret.me</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+        .card {
+            text-align: center;
+            padding: 3rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 480px;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">Under Construction</div>
+        <h1>Work in Progress</h1>
+        <p>This site is currently being updated. Check back soon for new content!</p>
+    </div>
+</body>
+</html>` 200
+}

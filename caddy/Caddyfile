@@ -1,0 +1,11 @@
+import wip.caddy
+
+# Public site (Automatic HTTPS for public internet)
+xavier.decoret.me {
+	import wip_site
+}
+
+# Local site (http://localhost)
+localhost {
+	import wip_site
+}
