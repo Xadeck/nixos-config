@@ -70,6 +70,8 @@
       ports = [
         "80:80"
         "443:443"
+        "[::]:80:80"
+        "[::]:443:443"
       ];
       volumes = [
         "/home/xdecoret/nixos-config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro"
