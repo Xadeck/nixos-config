@@ -67,11 +67,8 @@
     backend = "podman";
     containers.caddy = {
       image = "docker.io/library/caddy:latest";
-      ports = [
-        "80:80"
-        "443:443"
-        "[::]:80:80"
-        "[::]:443:443"
+      extraOptions = [
+        "--network=host"
       ];
       volumes = [
         "/home/xdecoret/nixos-config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro"
