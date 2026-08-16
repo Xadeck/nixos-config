@@ -170,6 +170,7 @@
     pocketbase
     prettier
     pyright
+    python3
     ripgrep
     rust-analyzer
     rustup
