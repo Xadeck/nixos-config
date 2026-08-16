@@ -133,6 +133,7 @@
     djlint
     docker
     dockerfmt
+    duf
     entr
     eza
     fastfetch
@@ -163,6 +164,7 @@
     luaformatter
     luarocks
     mdformat
+    ncdu
     nixd
     nodejs
     openssl
