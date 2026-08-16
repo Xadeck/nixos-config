@@ -27,7 +27,7 @@
   networking.hostName = "gmktec"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [80 443 25565];
 
   time.timeZone = "Europe/Zurich";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -49,10 +49,11 @@
   services.tailscale.enable = true;
   services.hypridle.enable = true;
 
-  # Ensure Caddy host volume directories exist
+  # Ensure host volume directories exist
   systemd.tmpfiles.rules = [
     "d /var/lib/caddy/data 0755 root root -"
     "d /var/lib/caddy/config 0755 root root -"
+    "d /var/lib/minecraft-data 0755 root root -"
   ];
 
   # Podman container runtime configuration
@@ -62,7 +63,7 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  # Declarative OCI Caddy Webserver Container
+  # Declarative OCI Containers
   virtualisation.oci-containers = {
     backend = "podman";
     containers.caddy = {
@@ -75,6 +76,22 @@
         "/home/xdecoret/nixos-config/caddy/wip.caddy:/etc/caddy/wip.caddy:ro"
         "/var/lib/caddy/data:/data"
         "/var/lib/caddy/config:/config"
+      ];
+      autoStart = true;
+    };
+    containers.minecraft = {
+      image = "docker.io/itzg/minecraft-server:latest";
+      ports = [
+        "25565:25565"
+      ];
+      environment = {
+        EULA = "TRUE";
+        TYPE = "PAPER";
+        VERSION = "LATEST";
+        MEMORY = "4G";
+      };
+      volumes = [
+        "/var/lib/minecraft-data:/data"
       ];
       autoStart = true;
     };
