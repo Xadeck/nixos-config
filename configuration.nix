@@ -27,7 +27,8 @@
   networking.hostName = "gmktec"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [80 443 25565];
+  networking.firewall.allowedTCPPorts = [80 443 25565 139 445];
+  networking.firewall.allowedUDPPorts = [5353];
 
   time.timeZone = "Europe/Zurich";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -54,6 +55,8 @@
     "d /var/lib/caddy/data 0755 root root -"
     "d /var/lib/caddy/config 0755 root root -"
     "d /var/lib/minecraft-data 0755 root root -"
+    "d /var/lib/timemachine 0770 root root -"
+    "d /var/lib/secrets 0700 root root -"
   ];
 
   # Podman container runtime configuration
@@ -92,6 +95,27 @@
       };
       volumes = [
         "/var/lib/minecraft-data:/data"
+      ];
+      autoStart = true;
+    };
+    containers.timemachine = {
+      image = "docker.io/mbentley/timemachine:latest";
+      extraOptions = [
+        "--network=host"
+      ];
+      environment = {
+        TM_USERNAME = "xdecoret";
+        TM_UID = "1000";
+        TM_GID = "100";
+        SET_PERMISSIONS = "true";
+        SHARE_NAME = "TimeMachine";
+        VOLUME_SIZE_MB = "512000"; # 500 GB quota
+      };
+      environmentFiles = [
+        "/var/lib/secrets/timemachine.env"
+      ];
+      volumes = [
+        "/var/lib/timemachine:/opt/timemachine"
       ];
       autoStart = true;
     };
