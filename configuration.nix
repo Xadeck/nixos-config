@@ -55,7 +55,7 @@
     "d /var/lib/caddy/data 0755 root root -"
     "d /var/lib/caddy/config 0755 root root -"
     "d /var/lib/minecraft-data 0755 root root -"
-    "d /var/lib/timemachine 0770 root root -"
+    "d /var/lib/timemachine 0700 xdecoret users -"
     "d /var/lib/secrets 0700 root root -"
   ];
 
@@ -107,7 +107,7 @@
         TM_USERNAME = "xdecoret";
         TM_UID = "1000";
         TM_GID = "100";
-        SET_PERMISSIONS = "true";
+        SET_PERMISSIONS = "false";
         SHARE_NAME = "TimeMachine";
         VOLUME_SIZE_MB = "512000"; # 500 GB quota
       };
@@ -115,7 +115,8 @@
         "/var/lib/secrets/timemachine.env"
       ];
       volumes = [
-        "/var/lib/timemachine:/opt/timemachine"
+        # Must be mapped to /opt/${TM_USERNAME}
+        "/var/lib/timemachine:/opt/xdecoret"
       ];
       autoStart = true;
     };

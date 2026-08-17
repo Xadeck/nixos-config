@@ -43,3 +43,13 @@ For local dev:
 ```
 caddy run --config ~/nixos-config/caddy/Caddyfile.dev
 ```
+
+## Time machine
+
+```
+journalctl -u podman-timemachine.service -n 20 --no-pager
+```
+
+The password to connect to the TimeMachine is not versioned but stored in
+`/var/lib/secrets/timemachine.env`. The same password was used in TimeMachine
+on the Macbook to encrypt the data.
