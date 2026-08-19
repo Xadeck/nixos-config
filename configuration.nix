@@ -84,8 +84,8 @@
     };
     containers.minecraft = {
       image = "docker.io/itzg/minecraft-server:latest";
-      ports = [
-        "25565:25565"
+      extraOptions = [
+        "--network=host"
       ];
       environment = {
         EULA = "TRUE";
