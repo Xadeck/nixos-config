@@ -215,6 +215,7 @@
     typescript-language-server
     unzip
     vscode-langservers-extracted
+    waybar
     zig
     zip
   ];
@@ -235,7 +236,6 @@
   programs.neovim.enable = true;
   programs.sway.enable = true;
   programs.vim.enable = true;
-  programs.waybar.enable = true;
 
   # Enable nix-ld to run unpatched dynamic binaries with common fallback libraries (e.g., IDE extensions, Node native addons)
   programs.nix-ld = {
