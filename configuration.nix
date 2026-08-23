@@ -200,7 +200,9 @@
     luaformatter
     luarocks
     mdformat
+    mlocate
     ncdu
+    niri
     nixd
     nodejs
     openssl
