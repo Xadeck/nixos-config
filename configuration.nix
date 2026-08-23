@@ -197,8 +197,6 @@
     fastfetch
     fd
     fish-lsp
-    fishPlugins.fzf-fish
-    fishPlugins.grc
     fuzzel
     fzf
     gcc
