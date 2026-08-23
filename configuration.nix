@@ -192,6 +192,7 @@
     docker
     dockerfmt
     duf
+    dunst
     entr
     eza
     fastfetch
@@ -208,6 +209,7 @@
     grc
     i3status
     inetutils
+    libnotify
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
