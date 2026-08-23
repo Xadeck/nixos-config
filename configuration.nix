@@ -41,7 +41,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd sway";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-user-session --cmd sway";
       };
     };
   };
@@ -294,6 +294,15 @@
     "x-scheme-handler/about" = "google-chrome.desktop";
     "x-scheme-handler/unknown" = "google-chrome.desktop";
     "x-scheme-handler/mailto" = "google-chrome.desktop";
+  };
+
+  # XDG Desktop Portal for Wayland / Sway (screen sharing, file pickers)
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
   };
 
   # This value determines the NixOS release from which the default
