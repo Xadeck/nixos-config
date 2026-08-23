@@ -50,6 +50,24 @@
   services.tailscale.enable = true;
   services.hypridle.enable = true;
 
+  # Locate database service
+  # - Check timer / schedule: systemctl list-timers update-locatedb.timer
+  # - Force update now:       sudo systemctl start update-locatedb.service
+  # - Check status:           systemctl status update-locatedb.service
+  # - View logs:              journalctl -u update-locatedb.service -e
+  services.locate = {
+    enable = true;
+    package = pkgs.plocate;
+    pruneNames = [
+      ".bzr"
+      ".cache"
+      ".git"
+      ".hg"
+      ".svn"
+      "personal"
+    ];
+  };
+
   # Audio (PipeWire)
   security.rtkit.enable = true;
   services.pulseaudio.enable = false;
@@ -200,7 +218,6 @@
     luaformatter
     luarocks
     mdformat
-    mlocate
     ncdu
     niri
     nixd
