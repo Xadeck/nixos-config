@@ -78,6 +78,11 @@
     pulse.enable = true;
   };
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   # Ensure host volume directories exist
   systemd.tmpfiles.rules = [
     "d /var/lib/caddy/data 0755 root root -"
