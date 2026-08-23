@@ -189,7 +189,6 @@
     delta
     dig
     djlint
-    docker
     dockerfmt
     duf
     dunst
@@ -214,7 +213,6 @@
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
     jq
-    keymapp
     keymapp
     kitty
     lldb
