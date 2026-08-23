@@ -8,39 +8,29 @@ nixos-rebuild --sudo switch --flake ~/nixos-config#gmktec
 nix flake update --flake ~/nixos-config 
 ```
 
-## Podmand / caddy
+## Caddy
 
-Check systemd container service:
+Check systemd service:
 
-```
-systemctl status podman-caddy.service
-```
-
-Check container logs (because NixOS runs system-level OCI containers as root):
-
-```
-sudo podman logs -f caddy
+```shell
+systemctl status caddy.service
 ```
 
-or without sudo:
+Check service logs:
 
+```shell
+journalctl -u caddy.service -n 20 --no-pager
 ```
-journalctl -u podman-caddy.service -n 20 --no-pager
-```
 
-Because Caddyfile is mounted into the container, here is how Caddy handles updates:
+Reload configuration after rebuilding or modifying Caddyfile:
 
-│ [!IMPORTANT]
-│ Simply editing and saving Caddyfile does NOT immediately publish changes live. Caddy caches its configuration in\
-│ memory and only updates when explicitly told to reload.
-
-```
-caddy validate --config ~/nixos-config/caddy/Caddyfile && sudo podman exec caddy caddy reload
+```shell
+sudo systemctl reload caddy
 ```
 
 For local dev:
 
-```
+```shell
 caddy run --config ~/nixos-config/caddy/Caddyfile.dev
 ```
 

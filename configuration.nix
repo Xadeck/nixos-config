@@ -45,6 +45,11 @@
       };
     };
   };
+  services.caddy = {
+    enable = true;
+    configFile = ./caddy/Caddyfile;
+  };
+  environment.etc."caddy/wip.caddy".source = ./caddy/wip.caddy;
   services.openssh.enable = true;
   services.fail2ban.enable = true;
   services.tailscale.enable = true;
@@ -85,8 +90,6 @@
 
   # Ensure host volume directories exist
   systemd.tmpfiles.rules = [
-    "d /var/lib/caddy/data 0755 root root -"
-    "d /var/lib/caddy/config 0755 root root -"
     "d /var/lib/minecraft-data 0755 root root -"
     "d /var/lib/timemachine 0700 xdecoret users -"
     "d /var/lib/secrets 0700 root root -"
@@ -102,19 +105,6 @@
   # Declarative OCI Containers
   virtualisation.oci-containers = {
     backend = "podman";
-    containers.caddy = {
-      image = "docker.io/library/caddy:latest";
-      extraOptions = [
-        "--network=host"
-      ];
-      volumes = [
-        "/home/xdecoret/nixos-config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro"
-        "/home/xdecoret/nixos-config/caddy/wip.caddy:/etc/caddy/wip.caddy:ro"
-        "/var/lib/caddy/data:/data"
-        "/var/lib/caddy/config:/config"
-      ];
-      autoStart = true;
-    };
     containers.minecraft = {
       image = "docker.io/itzg/minecraft-server:latest";
       extraOptions = [
