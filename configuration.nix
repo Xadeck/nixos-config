@@ -194,6 +194,7 @@
     nixd
     nodejs
     openssl
+    pavucontrol
     playerctl
     pocketbase
     prettier
