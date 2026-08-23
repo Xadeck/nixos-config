@@ -50,6 +50,16 @@
   services.tailscale.enable = true;
   services.hypridle.enable = true;
 
+  # Audio (PipeWire)
+  security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
   # Ensure host volume directories exist
   systemd.tmpfiles.rules = [
     "d /var/lib/caddy/data 0755 root root -"
