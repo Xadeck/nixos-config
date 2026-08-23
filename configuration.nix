@@ -220,6 +220,7 @@
     playerctl
     pocketbase
     prettier
+    prettierd
     pyright
     python3
     ripgrep
