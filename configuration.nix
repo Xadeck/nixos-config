@@ -247,6 +247,7 @@
     vscode-langservers-extracted
     waybar
     wev
+    wget
     wl-clipboard
     zig
     zip
