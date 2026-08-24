@@ -198,13 +198,13 @@
     grc
     i3status
     inetutils
-    libnotify
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
     jq
     keymapp
     kitty
+    libnotify
     lldb
     lua
     lua-language-server
@@ -227,6 +227,8 @@
     rust-analyzer
     rustup
     rustywind
+    satty
+    slurp
     starpls
     stylua
     swaytools
@@ -241,6 +243,8 @@
     unzip
     vscode-langservers-extracted
     waybar
+    wev
+    wl-clipboard
     zig
     zip
   ];
