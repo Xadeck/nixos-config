@@ -213,6 +213,7 @@
     mdformat
     ncdu
     niri
+    nirius
     nixd
     nodejs
     openssl
