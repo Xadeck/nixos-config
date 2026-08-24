@@ -229,6 +229,8 @@
     rustywind
     satty
     slurp
+    spotify
+    spotify-player
     starpls
     stylua
     swaytools
