@@ -37,14 +37,7 @@
     enable = true;
     package = pkgs.mariadb;
   };
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-user-session --cmd niri-session";
-      };
-    };
-  };
+  services.displayManager.ly.enable = true;
   services.caddy = {
     enable = true;
     configFile = ./caddy/Caddyfile;
