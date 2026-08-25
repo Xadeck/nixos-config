@@ -41,7 +41,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-user-session --cmd sway";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-user-session --cmd niri-session";
       };
     };
   };
@@ -214,7 +214,6 @@
     luarocks
     mdformat
     ncdu
-    niri
     nirius
     nix-output-monitor
     nixd
@@ -249,7 +248,6 @@
     typescript-language-server
     unzip
     vscode-langservers-extracted
-    waybar
     wev
     wget
     wl-clipboard
@@ -274,6 +272,8 @@
   programs.neovim.enable = true;
   programs.sway.enable = true;
   programs.vim.enable = true;
+  programs.niri.enable = true;
+  programs.waybar.enable = true;
 
   # Enable nix-ld to run unpatched dynamic binaries with common fallback libraries (e.g., IDE extensions, Node native addons)
   programs.nix-ld = {
