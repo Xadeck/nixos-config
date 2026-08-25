@@ -54,6 +54,7 @@
   services.fail2ban.enable = true;
   services.tailscale.enable = true;
   services.hypridle.enable = true;
+  services.fwupd.enable = true;
 
   # Locate database service
   # - Check timer / schedule: systemctl list-timers update-locatedb.timer
@@ -196,6 +197,7 @@
     google-chrome
     gopls
     grc
+    grim
     i3status
     inetutils
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -214,8 +216,10 @@
     ncdu
     niri
     nirius
+    nix-output-monitor
     nixd
     nodejs
+    nvd
     openssl
     pavucontrol
     playerctl
