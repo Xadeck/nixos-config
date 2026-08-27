@@ -206,6 +206,7 @@
     luaformatter
     luarocks
     mdformat
+    mpv
     ncdu
     nirius
     nix-output-monitor
@@ -244,6 +245,7 @@
     wev
     wget
     wl-clipboard
+    zathura
     zig
     zip
   ];
