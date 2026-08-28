@@ -157,6 +157,7 @@
     alejandra
     bazel_7
     bear
+    beautysh
     btop
     buildifier
     caddy
@@ -197,6 +198,7 @@
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
     jq
+    kdlfmt
     keymapp
     kitty
     libnotify
