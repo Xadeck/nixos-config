@@ -154,6 +154,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    meld
     alejandra
     bazel_7
     bear
