@@ -154,7 +154,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    usbutils
     alejandra
     bazel_7
     bear
@@ -198,6 +197,7 @@
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
+    jetbrains.idea
     jq
     kdlfmt
     keymapp
@@ -244,6 +244,7 @@
     tup
     typescript-language-server
     unzip
+    usbutils
     vscode-langservers-extracted
     wev
     wget
