@@ -186,6 +186,7 @@
     fzf
     gcc
     gh
+    git-graph
     github-desktop
     go
     google-chrome
@@ -202,6 +203,7 @@
     kdlfmt
     keymapp
     kitty
+    lazygit
     libnotify
     lldb
     lua
@@ -237,6 +239,7 @@
     swaytools
     tailwindcss
     tailwindcss-language-server
+    tig
     tldr
     tmux
     tree
