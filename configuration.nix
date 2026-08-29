@@ -154,6 +154,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    usbutils
     alejandra
     bazel_7
     bear
@@ -260,6 +261,7 @@
     nerd-fonts.fira-code
   ];
 
+  programs.nix-index.enable = true;
   programs.dconf.enable = true;
   programs.bat.enable = true;
   programs.fish.enable = true;
