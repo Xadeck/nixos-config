@@ -157,6 +157,7 @@
     hyprlax
     tomat
     glow
+    _7zz
     alejandra
     bazel_7
     bear
@@ -166,6 +167,7 @@
     buildifier
     cargo-nextest
     ccls
+    chafa
     chezmoi
     chromium
     clang
@@ -184,6 +186,8 @@
     eza
     fastfetch
     fd
+    ffmpeg
+    file
     fish-lsp
     fuzzel
     gcc
@@ -214,6 +218,7 @@
     luaformatter
     luarocks
     mdformat
+    mediainfo
     meld
     mpv
     ncdu
@@ -226,10 +231,12 @@
     pavucontrol
     playerctl
     pocketbase
+    poppler-utils
     prettier
     prettierd
     pyright
     python3
+    resvg
     ripgrep
     rust-analyzer
     rustup
