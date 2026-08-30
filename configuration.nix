@@ -164,7 +164,6 @@
     bmon
     btop
     buildifier
-    caddy
     cargo-nextest
     ccls
     chezmoi
@@ -187,7 +186,6 @@
     fd
     fish-lsp
     fuzzel
-    fzf
     gcc
     gh
     git-graph
@@ -203,14 +201,12 @@
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
-    iotop
     jetbrains.idea
     jq
     kdlfmt
     keymapp
     kitty
     kontroll
-    lazygit
     libnotify
     lldb
     lua
@@ -250,7 +246,6 @@
     tailwindcss-language-server
     tig
     tldr
-    tmux
     tree
     tree-sitter
     tup
@@ -261,7 +256,6 @@
     wev
     wget
     wl-clipboard
-    yazi
     zathura
     zig
     zip
@@ -287,6 +281,14 @@
   programs.vim.enable = true;
   programs.niri.enable = true;
   programs.waybar.enable = true;
+  programs.yazi.enable = true;
+  programs.tmux.enable = true;
+  programs.lazygit.enable = true;
+  programs.iotop.enable = true;
+  programs.fzf = {
+    keybindings = true;
+    fuzzyCompletion = true;
+  };
 
   # Enable nix-ld to run unpatched dynamic binaries with common fallback libraries (e.g., IDE extensions, Node native addons)
   programs.nix-ld = {
