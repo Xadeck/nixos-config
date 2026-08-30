@@ -154,11 +154,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    meld
+    hyprlax
+    tomat
+    glow
     alejandra
     bazel_7
     bear
     beautysh
+    bmon
     btop
     buildifier
     caddy
@@ -192,6 +195,7 @@
     go
     google-chrome
     gopls
+    gping
     grc
     grim
     i3status
@@ -199,11 +203,13 @@
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-cli
     inputs.antigravity-nix.packages.${pkgs.stdenv.hostPlatform.system}.google-antigravity-ide
+    iotop
     jetbrains.idea
     jq
     kdlfmt
     keymapp
     kitty
+    kontroll
     lazygit
     libnotify
     lldb
@@ -212,6 +218,7 @@
     luaformatter
     luarocks
     mdformat
+    meld
     mpv
     ncdu
     nirius
@@ -237,6 +244,7 @@
     spotify-player
     starpls
     stylua
+    superfile
     swaytools
     tailwindcss
     tailwindcss-language-server
@@ -253,6 +261,7 @@
     wev
     wget
     wl-clipboard
+    yazi
     zathura
     zig
     zip
