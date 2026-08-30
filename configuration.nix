@@ -154,9 +154,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    hyprlax
-    tomat
-    glow
     _7zz
     alejandra
     bazel_7
@@ -194,6 +191,7 @@
     gh
     git-graph
     github-desktop
+    glow
     go
     google-chrome
     gopls
@@ -247,12 +245,12 @@
     spotify-player
     starpls
     stylua
-    superfile
     swaytools
     tailwindcss
     tailwindcss-language-server
     tig
     tldr
+    tomat
     tree
     tree-sitter
     tup
