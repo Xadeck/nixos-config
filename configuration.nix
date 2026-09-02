@@ -162,6 +162,7 @@
     bmon
     btop
     buildifier
+    bun
     cargo-nextest
     ccls
     chafa
@@ -174,6 +175,7 @@
     codechecker
     cowsay
     delta
+    delve
     dig
     djlint
     dockerfmt
@@ -193,7 +195,9 @@
     github-desktop
     glow
     go
+    go
     google-chrome
+    gopls
     gopls
     gping
     grc
@@ -234,6 +238,7 @@
     prettierd
     pyright
     python3
+    realesrgan-ncnn-vulkan
     resvg
     ripgrep
     rust-analyzer
@@ -245,6 +250,7 @@
     spotify-player
     starpls
     stylua
+    swaybg
     swaytools
     tailwindcss
     tailwindcss-language-server
